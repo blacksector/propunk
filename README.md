@@ -1,3 +1,27 @@
+# VERTPUNK
+
+This is an attempt to migrate coinpunk to support vertcoin. Feel free to request access.
+
+## NOTE!
+
+This fork is unstable. Not all functionality works. If you deploy this, you WILL lose your vertcoins.
+
+This requires the [vertcoin-watchonly](https://github.com/dayreiner/vertcoin) fork of vertcoin to work.
+
+## Working
+- Signup
+- Login
+- Receive
+- List
+
+## BROKEN
+- Sending
+- QR Codes
+- Buy Coins
+
+## Unknown
+- Backups
+
 ## NOTICE: Breaking changes!
 
 Coinpunk updated to the latest version of SJCL, which has fixed a bug that caused PBKDF2 hashes to be inconsistent from the standard.
