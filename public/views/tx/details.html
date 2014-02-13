@@ -9,11 +9,11 @@
         </tr>
         <tr>
           <td>Amount</td>
-          <td><%- Math.abs(data.tx.amount).toFixed(8).replace(/\.?[0]+$/, "") %> BTC</td>
+          <td><%- Math.abs(data.tx.amount).toFixed(8).replace(/\.?[0]+$/, "") %> VTC</td>
         </tr>
         <tr>
           <td>Fee</td>
-          <td><%- data.tx.fee ? Math.abs(data.tx.fee)+' BTC' : '' %></td>
+          <td><%- data.tx.fee ? Math.abs(data.tx.fee)+' VTC' : '' %></td>
         </tr>
         <tr>
           <td>Confirmations</td>
@@ -24,7 +24,7 @@
             <% } else if(data.tx.confirmations < coinpunk.controllers.dashboard.minimumStrongSendConfirmations) { %>
               <span class="label label-info" rel="tooltip" data-toggle="tooltip" title="Transaction has had at least one confirmation and is likely to be successful, but will be considered even more definitive after 6 confirmations. You may want to wait if you are transferring a large sum of money, just to be safe.">Soft Confirmed</span>
             <% } else { %>
-              <span class="label label-success" rel="tooltip" data-toggle="tooltip" title="Transaction has at least 6 confirmations. This is the standard most Bitcoin services use for confirming large transfers.">Strongly Confirmed</span>
+              <span class="label label-success" rel="tooltip" data-toggle="tooltip" title="Transaction has at least 6 confirmations. This is the standard most Cryptocoin services use for confirming large transfers.">Strongly Confirmed</span>
             <% } %>
           </td>
         </tr>
