@@ -1,26 +1,21 @@
 # VERTPUNK
+This is an attempt to migrate coinpunk to support vertcoin. This requires my  [vertcoin-watchonly](https://github.com/dayreiner/vertcoin) fork of vertcoin to function.
 
-This is an attempt to migrate coinpunk to support vertcoin. Feel free to request access.
-
-## NOTE!
-
+## NOTE: Currently Not Usable
 This fork is unstable. Not all functionality works. If you deploy this, you WILL lose your vertcoins.
 
-This requires the [vertcoin-watchonly](https://github.com/dayreiner/vertcoin) fork of vertcoin to work.
 
-## Working
-- Signup
-- Login
-- Receive
-- List
+### Current Status: 
 
-## BROKEN
-- Sending
-- QR Codes
-- Buy Coins
+Working | Broken   | Unknown
+--------|----------|--------
+Signup  | Sending  | Backups
+Login   | QR Codes | 
+Receive | Buy Coins|
+List    |
 
-## Unknown
-- Backups
+
+* * *
 
 ## NOTICE: Breaking changes!
 
