@@ -1,146 +1,78 @@
+<!doctype html>
 <html>
   <head>
-    <title>Coinpunk - DIY Bitcoin Wallet Service</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <style>
-      #header h1 {
-        font-size: 70pt;
-        font-weight: bold;
-      }
-      i {
-        font-size: 30pt;
-      }
-      span {
-        padding-left: 20px;
-        font-size: 20pt;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Vertpunk by dayreiner</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <meta property="og:title" content="Coinpunk">
-    <meta property="og:description" content="Run your own Bitcoin wallet service" />
   </head>
   <body>
-    <a href="https://github.com/kyledrake/coinpunk"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-3 text-center">
-          <img src="img/logo-filled.png" style="padding-top: 30px;">
-        </div>
-        <div class="col-lg-4 text-center" id="header" style="padding-left: 50px">
-          <h1>COIN<br>PUNK</h1>
-          <img src="img/newwave.jpg" width="300">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1>Run your own Bitcoin wallet service.</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <p>Coinpunk is a project to build an open source, self-hosted DIY bitcoin wallet service you can run on your own server.</p>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h1><a href="beta.html">Coinpunk is now in beta</a></h1>
-        </div>
-      </div>
-      
-      <div class="row" style="padding-top: 20px">
-        <div class="col-lg-4 col-lg-offset-2">
-          <i class="icon-lock"></i> <span>Safe, Secure</span>
-          <p>
-            All encryption and transaction signing is done on the web browser, which means it is less susceptible to Bitcoin theft by hackers.
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <i class="icon-btc"></i> <span>Easy to Use</span>
-          <p>Simplifies using Bitcoins, so that you don't have to be an expert to use Bitcoins.
-        </div>
-      </div>
-      
-      <div class="row" style="padding-top: 20px">
-        <div class="col-lg-4 col-lg-offset-2">
-          <i class="icon-html5"></i> <span>100% HTML5 and JS</span>
-          <p>The user interface is entirely written in HTML with JavaScript, which means that you can run it on all modern browsers, or containerize it into an offline application. The backend is built with Node.js, which makes it very easy to get started.</p>
-        </div>
-        <div class="col-lg-4">
-          <i class="icon-check"></i> <span>Extensive Testing</span>
-          <p>Coinpunk tests with client-side, integration and functional tests, to help prevent bugs and streamline development.</p>
-        </div>
-      </div>
-      
-      <div class="row" style="padding-top: 20px">
-        <div class="col-lg-4 col-lg-offset-2">
-          <i class="icon-cogs"></i> <span>Bitcoin Node Agnostic</span>
-          <p>The code is written to provide future support for more Bitcoin node clients, including upcoming SPV-based wallets that require less resources to work.</p>
-        </div>
-        <div class="col-lg-4">
-          <i class="icon-usd"></i> <i class="icon-euro"></i> <i class="icon-jpy"></i> <i class="icon-cny"></i> <span>International</span>
-          <p>Allows you to see the value of your Bitcoins in multiple currencies, and future support for multiple languages is being planned.</p>
-        </div>
-      </div>
-      <div class="row" style="padding-top: 20px">
-        <div class="col-lg-4 col-lg-offset-2">
-          <i class="icon-mobile-phone"></i> <span>Mobile Friendly</span>
-          <p>Uses a responsive web design, so you can use Coinpunk on a phone just as easily as on a desktop.</p>
-        </div>
-        <div class="col-lg-4">
-          <i class="icon-linux"></i> <span>Open Source</span>
-          <p>Like Bitcoin itself, Coinpunk is 100% open source. You can do whatever you want with it.</p>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Source Code</h1>
-          <hr>
-          <p>
-            The first version ("Old School") is still available, but is no longer under active development. You can find the original site for it <a href="oldschool/index.html">here</a>, and the source code for it <a href="https://github.com/kyledrake/coinpunk/tree/oldschool">here</a>.
-          </p>
-          <p>
-            The next version of Coinpunk ("New Wave") is a complete rewrite of the original version to support features and security enhancements not possible with the original design.
-          </p>
-          <p><b>The source code for the new Coinpunk is still under development</b> - it's currently in beta, but we're working to finish the project. You can follow our progress on the <a href="https://github.com/kyledrake/coinpunk" target="_blank">Github</a> repository.</p>
-        </div>
-      </div>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/dayreiner/vertpunk">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/dayreiner/vertpunk/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/dayreiner/vertpunk/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Help Us Build This</h2>
-          <hr>
-          <p>If you find this project useful, I would love your support. The Coinpunk donations tipjar is <strong>1MHbxLgsgFQyvWkW1qiZs1HaXxU4S4LuWH</strong>. Yes, it's powered by Coinpunk.</p>
-        </div>
-      </div>
+    <div class="wrapper">
 
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Author</h2>
+      <section>
+        <div id="title">
+          <h1>Vertpunk</h1>
+          <p>Open source, self-hosted DIY Bitcoin wallet service</p>
           <hr>
-          <h3><a href="http://kyledrake.net" target="_blank">Kyle Drake</a> <small>(<a href="https://twitter.com/kyledrake" target="_blank">@kyledrake</a>)</small></h3>
-          <h3>Illustration by Kyle Wilson.</h3>
+          <span class="credits left">Project maintained by <a href="https://github.com/dayreiner">dayreiner</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
-      </div>
+
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
 
     </div>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-40998598-1', 'coinpunk.org');
-      ga('send', 'pageview');
-
-    </script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
