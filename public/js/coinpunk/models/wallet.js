@@ -330,7 +330,7 @@ coinpunk.Wallet = function(walletKey, walletId) {
     var tx = this.createTx(amtString, 0, addressString, changeAddress);
     var txSize = tx.raw.length / 2;
     // console.log(txSize);
-    return Math.ceil(txSize/1000)*0.0001;
+    return Math.ceil(txSize/1000)*0.001;
   };
 
   this.createSend = function(amtString, feeString, addressString, changeAddress) {
