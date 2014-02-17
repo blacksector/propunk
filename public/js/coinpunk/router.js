@@ -29,7 +29,7 @@ coinpunk.router.listener = function() {
   sock.onopen = function() {
     coinpunk.router.listenerTimeout = setInterval(function() {
       sock.send(JSON.stringify({method: 'listUnspent', addresses: coinpunk.wallet.addressHashes()}));
-    }, 30000);
+    }, 60000);
   };
 
   sock.onmessage = function(res) {
@@ -72,7 +72,7 @@ coinpunk.router.map('#/backup/download').to(function() {
 
     var payload = coinpunk.wallet.encryptPayload();
     var blob = new Blob([payload], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "coinpunk-wallet.txt");
+    saveAs(blob, "vertpunk-wallet.txt");
     coinpunk.router.route('backup');
   });
 });

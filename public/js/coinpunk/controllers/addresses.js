@@ -68,7 +68,7 @@ coinpunk.controllers.Addresses.prototype.requestBTCUpdate = function() {
 };
 
 coinpunk.controllers.Addresses.prototype.drawRequestQR = function(address) {
-  var uri = URI({protocol: 'bitcoin', path: address});
+  var uri = URI({protocol: 'vertcoin', path: address});
   
   var amount = $('#amount').val();
   var label = $('#label').val();
