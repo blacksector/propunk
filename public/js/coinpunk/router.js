@@ -29,7 +29,7 @@ coinpunk.router.listener = function() {
   sock.onopen = function() {
     coinpunk.router.listenerTimeout = setInterval(function() {
       sock.send(JSON.stringify({method: 'listUnspent', addresses: coinpunk.wallet.addressHashes()}));
-    }, 30000);
+    }, 60000);
   };
 
   sock.onmessage = function(res) {

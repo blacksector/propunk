@@ -1,7 +1,7 @@
 coinpunk.controllers.Tx = function() {};
 coinpunk.controllers.Tx.prototype = new coinpunk.Controller();
 
-coinpunk.controllers.Tx.prototype.defaultFee = '0.0001';
+coinpunk.controllers.Tx.prototype.defaultFee = '0.001';
 coinpunk.controllers.Tx.prototype.minimumConfirmationsToSpend = 1;
 
 coinpunk.controllers.Tx.prototype.details = function(txHash) {
@@ -85,7 +85,7 @@ coinpunk.controllers.Tx.prototype.create = function() {
     try {
       new Bitcoin.Address(address, coinpunk.config.network);
     } catch (e) {
-      errors.push('The provided bitcoin address is not valid.');
+      errors.push('The provided vertcoin address is not valid.');
     }
   }
 
@@ -93,7 +93,7 @@ coinpunk.controllers.Tx.prototype.create = function() {
   
   for(var i=0; i<myAddresses.length;i++) {
     if(myAddresses[i].address == address)
-      errors.push('You cannot send to your own bitcoin wallet.');
+      errors.push('You cannot send to your own vertcoin wallet.');
   }
 
   if(amount == '' || parseFloat(amount) == 0)
@@ -101,7 +101,7 @@ coinpunk.controllers.Tx.prototype.create = function() {
   else if(/^[0-9]+$|^[0-9]+\.[0-9]+$|^\.[0-9]+$/.exec(amount) === null)
     errors.push('You must have a valid amount to send.');
   else if(coinpunk.wallet.safeUnspentBalance().lessThan(new BigNumber(amount).plus(calculatedFee))) {
-    errors.push('Cannot spend more bitcoins than you currently have.');
+    errors.push('Cannot spend more vertcoins than you currently have.');
   }
 
   if(errors.length > 0) {
@@ -126,7 +126,7 @@ coinpunk.controllers.Tx.prototype.create = function() {
       delete coinpunk.wallet;
     } else {
       $.post('/api/tx/send', {tx: rawtx}, function(resp) {
-        coinpunk.database.setSuccessMessage("Sent "+amount+" BTC to "+address+".");
+        coinpunk.database.setSuccessMessage("Sent "+amount+" VTC to "+address+".");
 
         self.getUnspent(function() {
           coinpunk.router.route('dashboard');
@@ -170,7 +170,7 @@ coinpunk.controllers.Tx.prototype.calculateFee = function() {
 
   var calculatedFee = coinpunk.wallet.calculateFee(amount, address, changeAddress);
   $('#calculatedFee').val(calculatedFee);
-  $('#fee').text(coinpunk.wallet.calculateFee(amount, address, changeAddress)+' BTC');
+  $('#fee').text(coinpunk.wallet.calculateFee(amount, address, changeAddress)+' VTC');
   this.updateExchangeRates('container', false);
 };
 
@@ -198,12 +198,12 @@ coinpunk.controllers.Tx.prototype.scanQR = function(event) {
       return;
     }
 
-    if(uri.protocol() != 'bitcoin')
-      return errorsDiv.removeClass('hidden').text('Not a valid Bitcoin QR code.');
+    if(uri.protocol() != 'vertcoin')
+      return errorsDiv.removeClass('hidden').text('Not a valid Vertcoin QR code.');
     
     var address = uri.path();
     if(!address || address == '')
-      return errorsDiv.removeClass('hidden').text('No Bitcoin address found in QR code.');
+      return errorsDiv.removeClass('hidden').text('No Vertcoin address found in QR code.');
 
     $('#address').val(address);
     

@@ -1,3 +1,4 @@
+require('newrelic');
 var argv = require('optimist').argv;
 var servers = require('./lib/coinpunk/server');
 var config = require('./lib/coinpunk/server/config');
@@ -21,7 +22,7 @@ if(argv.httpsPort)
 // Kick off the server!
 (new servers.Server(config)).start();
 
-console.log("Coinpunk and his rude boys have taken the stage");
+console.log("Vertpunk started...");
 
 var domain = require('domain').create();
 domain.on('error', function(err) {

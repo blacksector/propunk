@@ -285,7 +285,7 @@ coinpunk.Wallet = function(walletKey, walletId) {
     }
 
     if(unspentAmt.compareTo(total) < 0) {
-      throw "you do not have enough bitcoins to send this amount";
+      throw "you do not have enough vertcoins to send this amount";
     }
 
     for(i=0;i<unspent.length;i++) {
