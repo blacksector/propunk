@@ -1,4 +1,4 @@
 {
   "network": "testnet",
-  "transactionFee": 0.0005
+  "transactionFee": 0.001
 }
