@@ -9,7 +9,7 @@ Vertpunk is experimental beta software based on beta software upstream. Be Forew
 
 Like Coinpunk, Vertpunk is aimed at developers, power users, and sysadmins interested in running their own web-based Vertcoin wallet.
 
-Vertpunk is also used to power the open source web-based Vertcoin wallet service at [wallet.coinme.ca](https://wallet.coinme.ca).
+Vertpunk is also used to power the open source web-based Vertcoin wallet service at [vtc.li](http://vtc.li).
 
 ## Get Started
 
