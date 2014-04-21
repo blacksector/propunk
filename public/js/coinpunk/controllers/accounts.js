@@ -318,9 +318,9 @@ $('body').on('click', '#generateAuthQR', function() {
     var authURI = new URI({
       protocol: 'otpauth',
       hostname: 'totp',
-      path: 'Vertpunk:'+coinpunk.wallet.walletId
+      path: 'Propunk:'+coinpunk.wallet.walletId
     });
-    authURI.setSearch({issuer: 'Vertpunk', secret: resp.key});
+    authURI.setSearch({issuer: 'Propunk', secret: resp.key});
 
     new QRCode(document.getElementById('authQR'), authURI.toString());
     $('#authQR').after('
