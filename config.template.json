@@ -1,6 +1,6 @@
 {
   "default": {
-    "bitcoind": "http://rpcuser:rpcpass@127.0.0.1:15888",
+    "bitcoind": "http://rpcuser:rpcpass@127.0.0.1:22444",
     "pricesUrl": "http://localhost:8080/rates.json",
     "testnet": true,
     "httpPort": 8080,
@@ -9,7 +9,7 @@
     "sslCert": "./coinpunk.crt"
   },
   "production": {
-    "bitcoind": "http://rpcuser:rpcpass@127.0.0.1:5888",
+    "bitcoind": "http://rpcuser:rpcpass@127.0.0.1:22444",
     "pricesUrl": "http://localhost:8080/rates.json",
     "testnet": false,
     "httpPort": 8080,
