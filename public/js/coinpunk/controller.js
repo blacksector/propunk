@@ -96,7 +96,7 @@ coinpunk.Controller.prototype.friendlyTimeString = function(timestamp) {
 coinpunk.Controller.prototype.updateExchangeRates = function(id) {
   coinpunk.pricing.getLatest(function(price, currency) {
     $('#balanceExchange').text(' ≈ '+ parseFloat(price * $('#balance').text()).toFixed(2) + ' ' + currency);
-    $('#exchangePrice').text('1 VTC ≈ ' + price + ' ' + currency);
+    $('#exchangePrice').text('1 PCN ≈ ' + price + ' ' + currency);
 
     $('#'+id+' .exchangePrice').remove();
 
