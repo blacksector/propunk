@@ -64,7 +64,7 @@ coinpunk.controllers.Dashboard.prototype.index = function() {
 coinpunk.controllers.Dashboard.prototype.updateExchangeRates = function(id) {
   coinpunk.pricing.getLatest(function(price, currency) {
     $('#balanceExchange').text(' ≈ '+ parseFloat(price * $('#balance').text()).toFixed(2) + ' ' + currency);
-    $('#exchangePrice').text('1 VTC ≈ ' + price + ' ' + currency);
+    $('#exchangePrice').text('1 PCN ≈ ' + price + ' ' + currency);
 
     $('#'+id+' .exchangePrice').remove();
 
