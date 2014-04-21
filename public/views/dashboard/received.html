@@ -17,7 +17,7 @@
       <div class="row" onclick="window.open('#/tx/details/<%- data.tx[i].hash %>','_self')">
         <div class="col-md-6">
           <strong><%- humaneDate(new Date(data.tx[i].time).toISOString()) %></strong>
-          <span class="receivedExchangePrice addExchangePrice pull-right" style="color: #33CC33; margin-right: 10px; font-size: 12px; font-weight: bold"><%- data.tx[i].amount %> VTC</span>
+          <span class="receivedExchangePrice addExchangePrice pull-right" style="color: #33CC33; margin-right: 10px; font-size: 12px; font-weight: bold"><%- data.tx[i].amount %> PCN</span>
         </div>
       </div>
       <div class="row" onclick="window.open('#/tx/details/<%- data.tx[i].hash %>','_self')">
@@ -45,7 +45,7 @@
         <% for(var i=0; i<data.tx.length; i++) { %>
           <tr>
             <td><%- coinpunk.wallet.getAddressName(data.tx[i].address) || data.tx[i].address %></td>
-            <td><span class="addExchangePrice"><%- data.tx[i].amount %> VTC</span></td>
+            <td><span class="addExchangePrice"><%- data.tx[i].amount %> PCN</span></td>
             <td>
               <%- data.tx[i].confirmations %>
 
