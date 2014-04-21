@@ -1,33 +1,31 @@
-# VERTPUNK
-Vertpunk is a fork of [Coinpunk](https://coinpunk.com/) modified for use on the [Vertcoin](http://vertcoin.org) network. 
+# PROPUNK
+ProPunk is a fork of [VertPunk] (http://vtc.li) modified for use on the [Procoin](http://www.teamprocoin.com/) network. 
 
 ## Notice: Use at your own risk.
 
-Vertpunk is experimental beta software based on beta software upstream. Be Forewarned. Use at your own risk.
+Propunk is experimental beta software based on beta software upstream. Be Forewarned. Use at your own risk.
 
-## Who uses Vertpunk
+## Who uses Propunk
 
-Like Coinpunk, Vertpunk is aimed at developers, power users, and sysadmins interested in running their own web-based Vertcoin wallet.
-
-Vertpunk is also used to power the open source web-based Vertcoin wallet service at [vtc.li](http://vtc.li).
+Like Coinpunk, Propunk is aimed at developers, power users, and sysadmins interested in running their own web-based Procoin wallet.
 
 ## Get Started
 
-Vertpunk requires the [vertcoin-watchony](https://github.com/dayreiner/vertcoin-watchonly) version of vertcoind to function.
+Propunk requires the [procoin-watchony](https://github.com/dayreiner/vertcoin-watchonly) version of procoind to function.
 
 See the [Install Guide](docs/INSTALL.md)
 
-## Vertpunk is for Advanced Users
+## Propunk is for Advanced Users
 
-Like Coinpunk, Vertcoin is also intended for advanced users only. Kyle says it best:
+Like Coinpunk, Procoin is also intended for advanced users only. Kyle says it best:
 
 >## Coinpunk is for Advanced Users
 >
 >If you've never worked on your own server before, and don't know how to do things like backup your database, I strongly recommend using a desktop client or hosted wallet provider like [coinpunk.com](https://coinpunk.com) instead. Coinpunk tries to be simple as possible, but like Gitlab, it does require a lot of knowledge to be run properly.
 
-## Supporting Vertpunk
+## Supporting Propunk
 
-Vertpunk would not be possible without Coinpunk. Please see [below](#help) to see how you can help with the upstream project. 
+Propunk would not be possible without Vertpunk and in turn, Coinpunk. Please see [below](#help) to see how you can help with the upstream project. 
 
 * * *
 
