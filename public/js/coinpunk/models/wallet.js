@@ -285,7 +285,7 @@ coinpunk.Wallet = function(walletKey, walletId) {
     }
 
     if(unspentAmt.compareTo(total) < 0) {
-      throw "you do not have enough vertcoins to send this amount";
+      throw "you do not have enough procoins to send this amount";
     }
 
     for(i=0;i<unspent.length;i++) {
@@ -330,7 +330,7 @@ coinpunk.Wallet = function(walletKey, walletId) {
     var tx = this.createTx(amtString, 0, addressString, changeAddress);
     var txSize = tx.raw.length / 2;
     // console.log(txSize);
-    return Math.ceil(txSize/1000)*0.001;
+    return Math.ceil(txSize/1000)*0.01;
   };
 
   this.createSend = function(amtString, feeString, addressString, changeAddress) {
